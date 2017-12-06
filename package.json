@@ -1,0 +1,12 @@
+{
+  "name": "dummy-travis-stages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -v",
+    "lint": "echo linting"
+  },
+  "author": "",
+  "license": "ISC"
+}
