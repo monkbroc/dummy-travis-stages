@@ -11,11 +11,11 @@ jobs:
   # stage: test runs automatically first
   - stage: npm release
     script: echo "Deploying to npm..."
+    node_js: 8
+    # release only main versions, not prereleases
+    if: tag =~ ^v\d+\.\d+\.\d+$
     deploy:
       provider: npm
       email: jvanier@gmail.com
       api_key:
         secure: vSynWxzIyAiT772RDQu8jvyW4f3ucWEesSZHVV2usjIw/klpnJmEvBMqQCuo3Ahr+AxBgnKJXRBZv3vJA4765Uwngo3X/94ngJIho7nxs9xMCHQu8aqS9vtLQNHrNMot4j6xbs8Wo/SFVXtkTEX/T0rKsiSCHxcPhD0sWA7uDFK4T+n4/xKYEgP7Tg4OJ/BXlTHhYcWdaVxPPtN6TlYS8FZ5qxdg7q11mYbMhP1CtEKXljRefWKpd/5MmvY0JbrmrZM1Ojy18vnwW0wcYJYy/VM1nMiF34H6eRKnJh3lxpZ1QWMDoywp5UuVblqtf4zp3y6G3NL+IlOTiI79Xm6pRgrePe1Xu0eOfz8n+SYDpcXIvGQkZ92G5F31eByoU6WqytSjrq+wNPr+Zor3RvVRwu1+nuRDokjazHgDBLiZmDi5m/Cxfrfzlsnrt22hhbpeCb9Ursd3E6AEAGVMzaKL/Nwl8jva0joh0Hge7nmw6PB+xxmFfRr2QhE69ZNJYfH9b9ADhbiBcytRL2BlVtEozHr0lHZHyqPaQ3Vlf4K0srMZVbI4ntubtiXw7iEqYe4NRi0JT8+PI5T56qZWBwGTwlefVb0NJ790s6go4muBJugbAAOPMUf4AqXFRi4v3CQ1+wwJ2DTBspMZM2vAM1BhRRnw/fiVfR2Iyy9FuDBVmbY=
-      on:
-        tags: true
-        repo: monkbroc/dummy-travis-stages
