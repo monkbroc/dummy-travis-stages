@@ -1,6 +1,6 @@
 {
   "name": "dummy-travis-stages",
-  "version": "1.2.0-rc.1",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
